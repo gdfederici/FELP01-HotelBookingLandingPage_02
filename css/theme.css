@@ -1,0 +1,364 @@
+@charset "UTF-8";
+/*** VARIABLES ***/
+/*** MIXINS ***/
+/*** EXTEND PLACEHOLDER ***/
+.button-theme, .header-main__cart_items, .hotel-selected__hotel-name p, .hotel-rating, .hotelcard-double__photo p, .hotelcard-single__photo p {
+  background: #ec1f46;
+  color: #ffffff;
+}
+
+.offer-selected, .package h4, .hotelcard-double__info, .hotelcard-single__info {
+  background: #0a223d;
+  color: #ffffff;
+}
+
+/*** BASECAMP ***/
+body {
+  background-color: #E5E5E5;
+}
+
+header, main {
+  background-color: #f5fafe;
+}
+
+footer {
+  background: #0a223d;
+}
+
+h5 {
+  color: #ec1f46;
+}
+
+h6 {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ec1f46;
+}
+
+.button-theme {
+  border: 1px solid #ec1f46;
+}
+
+.button-theme:hover {
+  background: #ffffff;
+  color: #ec1f46;
+}
+
+.button-theme:focus {
+  background: #ffffff;
+  color: #ec1f46;
+}
+
+/*** HEADER ***/
+.header-upper__gift-card {
+  background: url("../img/ico_gift_black.svg") no-repeat left;
+  background-size: 18px 18px;
+}
+
+.header-upper__loyalty-program {
+  background: url("../img/ico_star_black.svg") no-repeat left;
+  background-size: 18px 18px;
+}
+
+.header-main {
+  background-color: #fff;
+}
+
+.header-main__logo {
+  color: #333333;
+}
+
+.header-main__logo span {
+  color: #ec1f46;
+}
+
+.header-main__cart {
+  background: url("../img/ico_shopping-cart_black.svg") no-repeat bottom left;
+}
+
+.header-main__cart_items:hover {
+  color: #ffffff;
+}
+
+.header-main__user a {
+  background: url("../img/ico_chevron-down_black.svg") no-repeat center right;
+}
+
+.search-form input[type=text] {
+  background-color: #f5fafe;
+}
+
+.search-form input[type=submit] {
+  background: url("../img/ico_search_white.svg") no-repeat center;
+  background-color: #ec1f46;
+}
+
+.nav-main {
+  background-color: #0a223d;
+}
+
+.nav-main__link {
+  color: #ffffff;
+}
+
+.nav-main__link:hover {
+  color: #ec1f46;
+}
+
+.nav-main__link_active {
+  color: #ec1f46;
+}
+
+/*** MAIN CONTENT - MAIN OFFER ***/
+.nav-breadcrump ul li:not(:last-child):after {
+  content: " / ";
+  white-space: pre;
+}
+
+/* Blocco contentente nome e voto della soluzione scelta */
+/* Blocco contenente slider, riassunto e mappa */
+.hotel-photoslider__nav .prev-slider {
+  background: url("../img/ico_chevron-left_white.svg") no-repeat center;
+}
+
+.hotel-photoslider__nav .next-slider {
+  background: url("../img/ico_chevron-right_white.svg") no-repeat center;
+}
+
+.offer-selected__resume .resume__guest {
+  background: url("../img/ico_user_white.svg") no-repeat left;
+}
+
+.offer-selected__resume .resume__room {
+  background: url("../img/ico_home_white.svg") no-repeat left;
+}
+
+.offer-selected__resume__resume2 .resume__booking {
+  background: url("../img/ico_phone-call_white.svg") no-repeat left;
+}
+
+/* Navigazione secondaria interna all'offerta */
+.cards-menu__link_active {
+  color: #ec1f46;
+  border-bottom-color: #ec1f46;
+}
+
+/* Blocco contenente i tre riquadri con i dettagli dell'offerta selezionata */
+.package__style-half {
+  background: #ffffff;
+}
+
+.package__style-full {
+  background: #ffffff;
+}
+
+.package__list li {
+  background: url("../img/ico_check-circle_full.svg") no-repeat left;
+  /* Perchè con list-style-image non c'è allineamento verticale col testo */
+  line-height: 18px;
+}
+
+.package__list_multiline li {
+  background: url("../img/ico_check-circle_full.svg") no-repeat left top;
+}
+
+.package__date {
+  background: url("../img/ico_calendar_black.svg") no-repeat left;
+}
+
+.package__line {
+  border: 1px dashed #e0e0e0;
+}
+
+/*** MAIN CONTENT - OTHER PACKAGES ***/
+/* Card hotel a due colonne */
+.hotelcard-double__place {
+  background: url("../img/ico_map-pin_white.svg") no-repeat left;
+}
+
+.hotelcard-double__guest {
+  background: url("../img/ico_user_white.svg") no-repeat left;
+}
+
+.hotelcard-double__room {
+  background: url("../img/ico_home_white.svg") no-repeat left;
+}
+
+/* Card hotel a colonna singola */
+.hotelcard-single__place {
+  background: url("../img/ico_map-pin_white.svg") no-repeat left;
+}
+
+.hotelcard-single__guest {
+  background: url("../img/ico_user_white.svg") no-repeat left;
+}
+
+.hotelcard-single__room {
+  background: url("../img/ico_home_white.svg") no-repeat left;
+}
+
+/*** MAIN CONTENT - TESTIMONIALS ***/
+.testimonials-slider {
+  background: url("../img/vector-down.svg") no-repeat 64px 13px, url("../img/vector-up.svg") no-repeat 601px 119px #ffffff;
+}
+
+.testimonials-slider__name {
+  color: #ec1f46;
+}
+
+.testimonials-slider__nav .prev-testimonials {
+  background: url("../img/ico_chevron-left_black.svg") no-repeat center;
+}
+
+.testimonials-slider__nav .next-testimonials {
+  background: url("../img/ico_chevron-right_black.svg") no-repeat center;
+}
+
+/*** MAIN CONTENT - NEWSLETTER ***/
+.newsletter {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 34, 61, 0.9)), to(rgba(10, 34, 61, 0.7))), url(../img/background-newsletter.jpg);
+  background: linear-gradient(rgba(10, 34, 61, 0.9), rgba(10, 34, 61, 0.7)), url(../img/background-newsletter.jpg);
+}
+
+.newsletter__title {
+  color: #ffffff;
+}
+
+.newsletter__form input[type=mail] {
+  background-color: #f5fafe;
+}
+
+.newsletter__form input[type=mail]::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.newsletter__form input[type=mail]:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.newsletter__form input[type=mail]::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.newsletter__form input[type=mail]::placeholder {
+  color: #bdbdbd;
+}
+
+/*** MAIN CONTENT - OTHER ACTIVITIES ***/
+.other-activities__card p {
+  color: #ffffff;
+}
+
+.other-activities__card_1 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0a223d), color-stop(65%, rgba(196, 196, 196, 0))), url(../img/activity_01.jpg);
+  background: linear-gradient(0deg, #0a223d, rgba(196, 196, 196, 0) 65%), url(../img/activity_01.jpg);
+}
+
+.other-activities__card_2 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0a223d), color-stop(65%, rgba(196, 196, 196, 0))), url(../img/activity_02.jpg);
+  background: linear-gradient(0deg, #0a223d, rgba(196, 196, 196, 0) 65%), url(../img/activity_02.jpg);
+}
+
+.other-activities__card_3 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0a223d), color-stop(65%, rgba(196, 196, 196, 0))), url(../img/activity_03.jpg);
+  background: linear-gradient(0deg, #0a223d, rgba(196, 196, 196, 0) 65%), url(../img/activity_03.jpg);
+}
+
+.other-activities__card_4 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0a223d), color-stop(65%, rgba(196, 196, 196, 0))), url(../img/activity_04.jpg);
+  background: linear-gradient(0deg, #0a223d, rgba(196, 196, 196, 0) 65%), url(../img/activity_04.jpg);
+}
+
+/*** FOOTER ***/
+.footer__widget {
+  color: #bdbdbd;
+}
+
+.footer__widget a {
+  color: #bdbdbd;
+}
+
+.footer__widget a:hover {
+  color: #bdbdbd;
+}
+
+/* Prima riga del footer */
+.footer__logo {
+  color: #ffffff;
+}
+
+.footer__logo span {
+  color: #ec1f46;
+}
+
+/* Seconda riga del footer */
+.footer__contact_address {
+  background: url("../img/ico_map-pin_full.svg") no-repeat left;
+}
+
+.footer__contact_phone {
+  background: url("../img/ico_phone-call_full.svg") no-repeat left;
+}
+
+.footer__contact_mail {
+  background: url("../img/ico_mail_full.svg") no-repeat left;
+}
+
+.contact-form__input::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-form__input:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-form__input::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-form__input::placeholder {
+  color: #bdbdbd;
+}
+
+.contact-form textarea::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-form textarea:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-form textarea::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-form textarea::placeholder {
+  color: #bdbdbd;
+}
+
+.contact-form__required {
+  color: #e0e0e0;
+}
+
+/* Riga di servizio */
+.footer__bottom {
+  background: url("../img/pay-logo.jpg") no-repeat right top;
+  color: #ffffff;
+}
+
+.footer__bottom a {
+  color: #ffffff;
+}
+
+.footer__bottom a:hover {
+  color: #ffffff;
+}
+/*# sourceMappingURL=theme.css.map */

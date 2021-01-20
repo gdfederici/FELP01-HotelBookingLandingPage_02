@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Best Tour Plan - Hotel Booking Landing Page">
+    <meta name="keywords" content="Best Tour Plan, Hotel, Booking, Summer, Holiday, Vacation, Tour, Tour Plan, Rooms, Luxury Hotels">
+    <meta name="author" content="Giovanni Dario Federici">
+    <meta name ="copyright" content="TomorrowDevs">
+    <meta name=”robots” content="noindex, nofollow"> <!-- Perché è un sito di test / Test site -->
+
+    <meta property="og:title" content="Best Tour Plan | Booking Hotel">
+    <meta property="og:type" content="Booking Hotel.website">
+    <meta property="og:url" content="https://lp01-hotelbookinglandingpage02.netlify.app/">
+    <meta property="og:image" content="https://lp01-hotelbookinglandingpage01.netlify.app/img/hotelbookinglandingpage_thumb.jpg">
+    <meta property="og:description" content="Best Tour Plan - Hotel Booking Landing Page">
+    <meta property="og:locale" content="en_US">
+
+    <title>Best Tour Plan | Booking Hotel</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset-meyer.css" type="text/css" />
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link rel="stylesheet" href="css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+
+    <link rel="preload" href="/fonts/mulish-v1-latin-ext_latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/mulish-v1-latin-ext_latin-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/mulish-v1-latin-ext_latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/mulish-v1-latin-ext_latin-600.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/mulish-v1-latin-ext_latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/mulish-v1-latin-ext_latin-700.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/luckiest-guy-v11-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/luckiest-guy-v11-latin-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/nunito-v16-latin-ext_latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/nunito-v16-latin-ext_latin-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/nunito-v16-latin-ext_latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/nunito-v16-latin-ext_latin-600.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/nunito-v16-latin-ext_latin-800.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/nunito-v16-latin-ext_latin-800.woff" as="font" type="font/woff" crossorigin> 
+</head>
+
+
+<body>
+    <header>
+        <div class="header-upper page-layout">
+            <p><strong>Questions? Need Help?</strong> Call us on <a href="tel:+1234561500">(+123) 456 1500</a></p>
+            <a class="header-upper__gift-card" href="#">BTP Gift Card</a>
+            <a class="header-upper__loyalty-program" href="#">Loyalty Program</a>
+        </div>
+
+        <div class="header-main page-layout">
+            <h1 class="header-main__logo">Best <span>Tour</span> Plan</h1>
+            <form class="search-form" action="#" method="get">
+                <label for="searchlocation" class="onlyscreenreader">Search location</label><input id="searchlocation" type="text" name="searchlocation" placeholder="Search Location" required="required" />
+                <input type="submit" name="submit" value="" />
+            </form>
+            <div class="header-main__cart">
+                <a href="#" class="header-main__cart_items">2</a>
+            </div>
+            <div class="header-main__user">
+                <picture>
+                    <source srcset="img/avatar_nathan.webp" type="image/webp">
+                    <source srcset="img/avatar_nathan.jpg" type="image/jpeg"> 
+                    <img src="img/avatar_nathan.jpg" width="40" height="40" loading="lazy" alt="User avatar">
+                </picture>
+                <a href="#">Nathan</a>
+            </div>
+        </div>
+
+        <nav class="nav-main page-layout">
+            <ul>
+                <li><a class="nav-main__link" href="#">All deals</a></li>
+                <li><a class="nav-main__link" href="#">Hotels</a></li>
+                <li><a class="nav-main__link" href="#">Activities</a></li>
+                <li><a class="nav-main__link" href="#">Hotel day packages</a></li>
+                <li><a class="nav-main__link" href="#">Restaurants</a></li>
+                <li><a class="nav-main__link" href="#">Events</a></li>
+                <li><a class="nav-main__link" href="#">Rodrigues</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <nav class="nav-breadcrump page-layout">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Flash Offers</a></li>
+                <li><a href="#">Grand Hilton Hotel</a></li>
+            </ul>
+        </nav>
+
+        <section class="main-offer page-layout"> <!-- Contenitore per l'offerta principale -->
+
+            <div class="main-offer__hotel-selected hotel-selected"> <!-- Blocco contenente nome e voto della soluzione scelta / Name and grade -->
+                <div class="hotel-selected__hotel-title"> <!-- Per posizionamento / Position -->
+                    <div class="hotel-selected__stars-rate">
+                        <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                        <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                        <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                        <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                        <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                    </div> 
+                    <div class="hotel-selected__hotel-name">
+                        <h2>Gran Hilton Hotel</h2>
+                        <p>Flash Offer</p>
+                    </div>
+                    <p>Half-Board/ All inclusive + complimentary activities + child stays free</p>
+                </div>
+                <div class="hotel-rating"> 
+                    <p>User Ratings</p>
+                    <p><span class="hotel-rating__hotel-vote">4.5/</span>5</p>
+                </div>
+            </div>
+
+            <div class="main-offer__offer-highlights offer-highlights"> <!-- Blocco contenente slider, riassunto e mappa / Slider, summary and map -->
+                <div class="hotel-photoslider">
+                    <picture>
+                        <source srcset="img/grand-hilton-hotel.webp" type="image/webp">
+                        <source srcset="img/grand-hilton-hotel.jpg" type="image/jpeg"> 
+                        <img src="img/grand-hilton-hotel.jpg" width="728" height="450" loading="lazy" alt="Gran Hilton Hotel swimming pool">
+                    </picture>
+                    <div class="hotel-photoslider__nav">
+                        <a href="#" class="prev-slider" aria-label="Previous Photo"></a>
+                        <a href="#" class="next-slider" aria-label="Next Photo"></a>
+                    </div>    
+                </div>
+                <div class="offer-highlights__column"> <!-- Per posizionamento / Position -->
+                    <div class="offer-selected">
+                        <div class="offer-selected__resume"> <!-- Per posizionamento / Position -->
+                            <div class="offer-selected__resume1"> <!-- Per posizionamento / Position -->
+                                <p class="resume__mini">price stars as</p>
+                                <p class="resume__price">$ 8,500</p>
+                                <p>per room / night</p>
+                                <p class="resume__booking">Quick Booking</p>
+                            </div>
+                            <div class="offer-selected__resume2"> <!-- Per posizionamento / Position -->
+                                <p class="resume__guest">2 x Guests</p>
+                                <p class="resume__room">1 x Room</p>
+                                <p class="resume__booking">12100</p>
+                            </div>
+                        </div>
+                        <a href="#" class="offer-selected__button button-theme">View Other Options</a>
+                    </div>
+                    <div class="offer-map">
+                        <picture>
+                            <source srcset="img/map.webp" type="image/webp">
+                            <source srcset="img/map.jpg" type="image/jpeg"> 
+                            <img src="img/map.jpg" width="347" height="213" loading="lazy" alt="Gran Hilton Hotel position on Google maps">
+                        </picture>
+                    </div>
+                </div>
+            </div> <!-- Blocco contenente slider, riassunto e mappa / Slider, summary and map -->
+
+            <nav class="main-offer__cards-menu cards-menu"> <!-- Navigazione secondaria interna all'offerta / Secondary nav -->
+                <ul>
+                    <li><a class="cards-menu__link cards-menu__link_active" href="#">Package summery</a></li>
+                    <li><a class="cards-menu__link" href="#">Hotel information</a></li>
+                    <li><a class="cards-menu__link" href="#">Rooms</a></li>
+                    <li><a class="cards-menu__link" href="#">Facilities & Activities</a></li>
+                    <li><a class="cards-menu__link" href="#">Dining & Entertainment</a></li>
+                    <li><a class="cards-menu__link" href="#">Reviews</a></li>
+                    <li><a class="cards-menu__link" href="#">Questions & Answers</a></li>
+                </ul>
+            </nav>
+
+            <div class="main-offer__package package"> <!-- Blocco contenente i tre riquadri con i dettagli dell'offerta selezionata / Three boxes of selected offer -->
+                <h2>Package summery</h2>
+                <div class="package-row">
+                    <div class="package__style-half">
+                        <h4>Package Highlights</h4>
+                        <div class="package__content"> <!-- Per posizionamento / Position --> 
+                            <ul class="package__list">
+                                <li>Half Board/ All Inclusive</li>
+                                <li>Child Under 11 Years Stay Free</li>
+                                <li>LUX* Me Spa</li>
+                            </ul>
+                            <ul class="package__list">
+                                <li>Luxurious 5-Star Hotel</li>
+                                <li>Banyan An Adult Only Zone</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="package__style-half">
+                        <h4>Offer Details</h4>
+                        <div class="package__content"> <!-- Per posizionamento / Position -->
+                            <div class="package__column package__column_2"> <!-- Per posizionamento / Position -->
+                                <ul class="package__list package__list_multiline">
+                                    <li>Benefit from a special discounted CHILL'OUT OFFER at Grand Hilton Hotel.</li>
+                                </ul>
+                                <p class="package__mini">* Valid until 30 April 2020</p>
+                            </div>
+                            <ul class="package__date">
+                                <li>10th March - 30th April 2020</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="package__style-full">
+                    <h4>Package Summery Details</h4>
+                    <div class="package__content package__content_half"> <!-- Per posizionamento / Position -->
+                        <div class="package__column package__column_3"> <!-- Per posizionamento / Position -->
+                            <h5>Purchase inclusions</h5>
+                            <ul class="package__list">
+                                <li>Room as per selection</li>
+                                <li>Half Board or All Inclusive Meal Plan</li>
+                                <li>Complimentary Land & Water activities</li>
+                                <li>Child Under 11 years old stays free</li>
+                                <li>Free Wi-Fi</li>
+                                <li>Free Secure Parking</li>
+                            </ul>
+                        </div>
+                        <div class="package__column package__column_3"> <!-- Per posizionamento / Position -->
+                            <h5>Complimentart Land Based Activities</h5>
+                            <ul class="package__list">
+                                <li>Gym</li>
+                                <li>Beach Volley</li>
+                                <li>Table tennis</li>
+                                <li>Soccer balls</li>
+                                <li>Yoga</li>
+                                <li>Unlimited access to driving range</li>
+                            </ul>
+                        </div>
+                        <div class="package__column package__column_3"> <!-- Per posizionamento / Position -->
+                            <h5>Complimentary Water Based Activities</h5>
+                            <ul class="package__list">
+                                <li>Water skiing</li>
+                                <li>Windsurfing</li>
+                                <li>Pedal boats</li>
+                                <li>Kayaking</li>
+                                <li>Aqua Gym</li>
+                                <li>Glass bottom boat trips</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="package__line">
+                    <div class="package__content"> <!-- Per posizionamento / Position -->
+                        <div class="package__column package__column_3"> <!-- Per posizionamento / Position -->
+                            <h5>Meal plan available</h5>
+                            <ul class="package__list">
+                                <li>Half Board</li>
+                                <li>All Inclusive</li>
+                            </ul>
+                        </div>
+                        <div class="package__column package__column_3"> <!-- Per posizionamento / Position -->
+                            <h5>Entertainment</h5>
+                            <ul class="package__list">
+                                <li>Live music</li>
+                                <li>DJ & Mauritian Dance Show</li>
+                            </ul>
+                        </div>
+                        <div class="package__column package__column_3"> <!-- Per posizionamento / Position -->
+                            <h5>Check In & Check Out</h5>
+                            <ul class="package__list">
+                                <li>Check In Time 14:00</li>
+                                <li>Check Out Time 11:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- main-offer__package package - Blocco contenente i tre riquadri con i dettagli dell'offerta selezionata / Three boxes of selected offer -->
+
+        </section> <!-- main-offer page-layout - Contenitore per l'offerta principale -->
+
+
+        <div class="other-packages page-layout"> <!-- Contenitore per le altre offerte -->
+            <h3>Other packages</h3>
+
+            <div class="other-packages__row"> <!-- Per posizionamento / Position -->
+                <div class="hotelcard-double other-packages__hotelcard">
+                    <div class="hotelcard-double__photo">
+                        <picture>
+                            <source srcset="img/hotel-blue-haven.webp" type="image/webp">
+                            <source srcset="img/hotel-blue-haven.jpg" type="image/jpeg"> 
+                            <img src="img/hotel-blue-haven.jpg" width="366" height="500" loading="lazy" alt="Hotel Blue Haven">
+                        </picture>
+                        <p>Flash Offer</p>
+                    </div>
+                    <div class="hotelcard-double__info">
+                        <div><!-- Per posizionamento / Position -->
+                            <div class="hotelcard-double__info-stars-rate"> <!-- Per posizionamento / Position -->
+                                <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                                <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                                <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                                <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                                <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                            </div> 
+                            <h4>Hotel Blue Haven</h4>
+                        </div>
+                        <p>Aute quis duis excepteur excepteur ipsum cat eiusmod consectetur enim laborum magna llit. Ipsum est fugiat velit ea llamco do esse ut in veniam sun in onsequat. Aute quis duis epteur excepteur ipsum occaecat eiusmod nsectetur enim laborum magna mollit. Ipsum est fugiat velit ea ullamco do</p>
+                        <div class="hotelcard-double__bulletpoint"> <!-- Per posizionamento / Position -->
+                            <p class="hotelcard-double__place">1749 Wheeler Ridge Delaware</p>
+                            <p class="hotelcard-double__guest">2 x Guests</p>
+                            <p class="hotelcard-double__room">1 x Room</p>
+                        </div>
+                        <div class="hotelcard-double__book"> <!-- Per posizionamento / Position -->
+                            <div class="hotelcard-double__costi">
+                                <p class="hotelcard-double__fullprice">$ 10,500</p>
+                                <p class="hotelcard-double__price">$ 8,500</p>
+                            </div>
+                            <a href="#" class="hotecard-double__button button-theme">Book Now</a>
+                        </div>
+                    </div>
+                </div> <!-- hotelcard-double -->
+
+                <div class="hotelcard-single other-packages__hotelcard">
+                    <div class="hotelcard-single__photo">
+                        <picture>
+                            <source srcset="img/lux-belle-mare.webp" type="image/webp">
+                            <source srcset="img/lux-belle-mare.jpg" type="image/jpeg"> 
+                            <img src="img/lux-belle-mare.jpg" width="350" height="250" loading="lazy" alt="LUX* Belle Mare">
+                        </picture>
+                        <p>Flash Offer</p>
+                    </div>
+                    <div class="hotelcard-single__info">
+                        <h4>LUX* Belle Mare</h4>
+                        <div class="hotelcard-single__bulletpoint"> <!-- Per posizionamento / Position -->
+                            <p class="hotelcard-single__place">1749 Wheeler Ridge Delaware</p>
+                            <p class="hotelcard-single__guest">2 x Guests</p>
+                            <p class="hotelcard-single__room">1 x Room</p>
+                        </div>
+                        <div class="hotelcard-single__book">
+                            <div class="hotelcard-single__costi">
+                                <p class="hotelcard-single__fullprice">$ 8,500</p>
+                                <p class="hotelcard-single__price">$ 3,000</p>
+                            </div>
+                            <a href="#" class="hotelcard-single__button button-theme">Book Now</a>
+                        </div>
+                    </div>
+                </div> <!-- hotelcard-single -->
+            </div> <!-- other-packages__row - Fine prima riga -->
+
+            <div class="other-packages__row">
+                <div class="hotelcard-single other-packages__hotelcard">
+                    <div class="hotelcard-single__photo">
+                        <picture>
+                            <source srcset="img/white-palace.webp" type="image/webp">
+                            <source srcset="img/white-palace.jpg" type="image/jpeg"> 
+                            <img src="img/white-palace.jpg" width="350" height="250" loading="lazy" alt="White Palace">
+                        </picture>
+                        <p>Flash Offer</p>
+                    </div>
+                    <div class="hotelcard-single__info">
+                        <h4>White Palace</h4>
+                        <div class="hotelcard-single__bulletpoint"> <!-- Per posizionamento / Position -->
+                            <p class="hotelcard-single__place">1749 Wheeler Ridge Delaware</p>
+                            <p class="hotelcard-single__guest">2 x Guests</p>
+                            <p class="hotelcard-single__room">1 x Room</p>
+                        </div>
+                        <div class="hotelcard-single__book">
+                            <div class="hotelcard-single__costi">
+                                <p class="hotelcard-single__fullprice">$ 10,500</p>
+                                <p class="hotelcard-single__price">$ 9,500</p>
+                            </div>
+                            <a href="#" class="hotelcard-single__button button-theme">Book Now</a>
+                        </div>
+                    </div>
+                </div> <!-- hotelcard-single -->
+
+                <div class="hotelcard-single other-packages__hotelcard">
+                    <div class="hotelcard-single__photo">
+                        <picture>
+                            <source srcset="img/luxury-place.webp" type="image/webp">
+                            <source srcset="img/luxury-place.jpg" type="image/jpeg"> 
+                            <img src="img/luxury-place.jpg" width="350" height="250" loading="lazy" alt="Luxury Place">
+                        </picture>
+                        <p>Flash Offer</p>
+                    </div>
+                    <div class="hotelcard-single__info">
+                        <h4>Luxury Place</h4>
+                        <div class="hotelcard-single__bulletpoint"> <!-- Per posizionamento / Position -->
+                            <p class="hotelcard-single__place">1749 Wheeler Ridge Delaware</p>
+                            <p class="hotelcard-single__guest">2 x Guests</p>
+                            <p class="hotelcard-single__room">1 x Room</p>
+                        </div>
+                            <div class="hotelcard-single__book">
+                            <div class="hotelcard-single__costi">
+                                <p class="hotelcard-single__fullprice">$ 4,500</p>
+                                <p class="hotelcard-single__price">$ 2,500</p>
+                            </div>
+                            <a href="#" class="hotelcard-single__button button-theme">Book Now</a>
+                        </div>
+                    </div> 
+                </div> <!-- hotelcard-single -->
+
+                <div class="hotelcard-single other-packages__hotelcard-last">
+                    <div class="hotelcard-single__photo">
+                        <picture>
+                            <source srcset="img/hotel-five-star.webp" type="image/webp">
+                            <source srcset="img/hotel-five-star.jpg" type="image/jpeg"> 
+                            <img src="img/hotel-five-star.jpg" width="350" height="250" loading="lazy" alt="Hotel Five Star">
+                        </picture>
+                        <p>Flash Offer</p>
+                    </div>
+                    <div class="hotelcard-single__info">
+                        <h4>Hotel Five Star</h4>
+                        <div class="hotelcard-single__bulletpoint"> <!-- Per posizionamento / Position -->
+                            <p class="hotelcard-single__place">1749 Wheeler Ridge Delaware</p>
+                            <p class="hotelcard-single__guest">2 x Guests</p>
+                            <p class="hotelcard-single__room">1 x Room</p>
+                        </div>
+                        <div class="hotelcard-single__book">
+                            <div class="hotelcard-single__costi">
+                                <p class="hotelcard-single__fullprice">$ 6,500</p>
+                                <p class="hotelcard-single__price">$ 3,500</p>
+                            </div>
+                            <a href="#" class="hotelcard-single__button button-theme">Book Now</a>
+                        </div>
+                    </div>
+                </div> <!-- hotelcard-single -->
+
+            </div> <!-- other-packages__row - Fine seconda riga -->
+
+        </div> <!-- other-packages - Contenitore per le altre offerte -->
+
+        <section class="testimonials page-layout page-layout__testimonials"> <!-- Contenitore per testimonianze -->
+            <h3>What people thinks about us</h3>
+
+            <div class="testimonials-slider"> <!-- Slider testimonianze-->
+                <div class="testimonials-slider__single"> <!-- Blocco singola testimonianza -->
+                    <div class="testimonials-slider__user"> <!-- Blocco utente con immagine, nome, data e voto -->
+                        <picture>
+                            <source srcset="img/avatar_megan-fox.webp" type="image/webp">
+                            <source srcset="img/avatar_megan-fox.jpg" type="image/jpeg"> 
+                            <img src="img/avatar_megan-fox.jpg" width="90" height="90" loading="lazy" alt="User avatar">
+                        </picture>
+                        <p class="testimonials-slider__name">Megan Fox</p>
+                        <p class="testimonials-slider__date">Stayed 18 Nov, 2019</p>
+                        <div class="testimonials-slider__stars-rate"> <!-- Per posizionamento / Position -->
+                            <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                            <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                            <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                            <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                            <img src="img/ico_star-rating.svg" width="8" height="8" loading="lazy" alt="Single star rate">
+                        </div>
+                    </div> <!-- testimonials-slider__user - Blocco utente con immagine, nome, data e voto -->
+                    <p class="testimonials-slider_review">It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue was only that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of gallery which were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location is not good as per atmosphere, it is very nearby most of the popular places but self location in a narrow street is not good. Overall it was a good experience and could recommend.</p>
+                </div> <!-- testimonials-slider__single - Blocco singola testimonianza -->
+                
+                <div class="testimonials-slider__nav">
+                    <a href="#" class="prev-testimonials" aria-label="Previous Testimonial"></a>
+                    <a href="#" class="next-testimonials" aria-label="Next-Testimonial"></a>
+                </div>
+            </div>
+
+        </section> <!-- testimonials page-layout - Contenitore per testimonianze -->
+
+        <section class="newsletter">
+            <div class="newsletter__layout page-layout">
+                <div class="newsletter__title"> <!-- Per posizionamento / Position -->
+                    <p>subscribe to our</p>
+                    <h3>Newsletter</h3>
+                </div>
+                <form class="newsletter__form" action="#" method="post">
+                    <label for="mailnewsletter" class="onlyscreenreader">Your mail address</label><input id="mailnewsletter" type="email" name="mailnewsletter" placeholder="Your email address" required="required" />
+                    <input type="submit" name="submit" value="Send" class="button-theme" />
+                </form>
+            </div>
+        </section> <!-- newsletter -->
+
+        <div class="other-activities page-layout page-layout__other-activities">  <!-- Contenitore per le altre attività -->
+            <h3>Other activities</h3>
+            <div class="other-activities__row"> <!-- Per posizionamento / Position -->
+                <div class="other-activities__card other-activities__card_1">
+                    <div>
+                        <p>The curious corner of chamarel</p>
+                        <a href="#" class="other-activities__button button-theme">Book Now</a>
+                    </div> 
+                </div>
+                <div class="other-activities__card other-activities__card_2">
+                    <div>
+                        <p>Gymkhana club golf course</p>
+                        <a href="#" class="other-activities__button button-theme">Book Now</a>
+                    </div>                   
+                </div>
+                <div class="other-activities__card other-activities__card_3">
+                    <div>
+                        <p>Tamarind falls hiking trip - full day</p>
+                        <a href="#" class="other-activities__button button-theme">Book Now</a>                    
+                    </div>
+                </div>
+                <div class="other-activities__card other-activities__card_4">
+                    <div>
+                        <p>The blue marine discovery quest</p>
+                        <a href="#" class="other-activities__button button-theme">Book Now</a>                    
+                    </div>
+                </div>
+            </div>
+        </div> <!-- other-activities - Contenitore per le altre attività -->
+
+    </main>
+
+    <footer class="page-layout page-layout__footer">
+
+        <div class="footer__widget"> <!-- Prima riga del footer -->
+            <p class="footer__logo footer__widget_single">Best <span>Tour</span> Plan</p>
+            <div class="footer__widget_single">
+                <h6>All categories</h6>
+                <ul>
+                    <li><a href="#">All Deals</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">Spa Packages</a></li>
+                    <li><a href="#">Hotel Day Packages</a></li>
+                    <li><a href="#">Restaurants</a></li>
+                    <li><a href="#">Fitness</a></li>
+                    <li><a href="#">Rodrigues</a></li>
+                </ul>
+            </div>
+            <div class="footer__widget_single">
+                <h6>Additional information</h6>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">How does it work?</a></li>
+                    <li><a href="#">Frequently Asked Questions</a></li>
+                    <li><a href="#">Deals.mu loyalty program</a></li>
+                    <li><a href="#">Promote your Business on BTP</a></li>
+                </ul>
+                <div class="footer__social">
+                    <h6>Social Network</h6>
+                    <ul>
+                        <li><a href="#"><img src="img/ico_social-facebook-circle_full.svg" loading="lazy" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="img/ico_social-youtube-circle_full.svg" loading="lazy" alt="Youtube"></a></li>
+                        <li><a href="#"><img src="img/ico_social-instagram-circle_full.svg" loading="lazy" alt="Instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__widget_single footer__widget_last">
+                <h6>Legal information</h6>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Cancellation policy</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div> <!-- footer__widget - Prima riga del footer -->
+
+        <div class="footer__widget"> <!-- Seconda riga del footer -->
+            <div class="footer__widget_double">
+                <h6>Contact details</h6>
+                <p>Feel free to contact us by phone, email or by our contact form</p>
+                <p class="footer__contact footer__contact_address">9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States</p>
+                <p class="footer__contact footer__contact_phone">Tel (business hours) : 269 1500<br />
+                    Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)<br />
+                    Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</p>
+                <p class="footer__contact footer__contact_mail">cherly.lawson@example.com</p>
+            </div>
+            <div class="footer__widget_double footer__widget_last">
+                <h6>Send us a messagge</h6>
+                <form class="contact-form" action="#" method="post">
+                    <label for="name" class="onlyscreenreader">Your full name</label><input id="name" type="text" name="name" placeholder="Your Full Name*" required="required" class="contact-form__input" />
+                    <label for="phone" class="onlyscreenreader">Phone number</label><input id="phone" type="tel" name="phone" placeholder="Phone Number*" required="required" class="contact-form__input" />
+                    <label for="message" class="onlyscreenreader">Message</label><textarea id="message" name="messagge" placeholder="Message" rows="4"></textarea>
+                    <input type="submit" name="submit" value="Send" class="button-theme" />
+                </form>
+                <p class="contact-form__required">* Required fields</p>
+            </div>
+        </div> <!-- footer__widget" - Seconda riga del footer -->
+
+        <div class="footer__bottom"> <!-- Riga di servizio -->
+            <ul>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Conditions of use</a></li>
+                <li><a href="#">Cancellations policy</a></li>
+            </ul>
+        </div> <!-- footer__bottom - Riga di servizio -->
+    
+    </footer>
+
+</body>
+</html>

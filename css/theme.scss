@@ -1,0 +1,350 @@
+/*** VARIABLES ***/
+$color-one: #ec1f46;
+$color-two: #0a223d;
+$color-background: #f5fafe;
+$color-text_dark: #333333;
+$color-text_light: #ffffff;
+
+/*** MIXINS ***/
+@mixin bullet-ico($property) {
+    background: url($property) no-repeat left;
+}
+
+/*** EXTEND PLACEHOLDER ***/
+%evidence-color_one {
+    background: $color-one;
+    color: $color-text_light;    
+}
+%box-color_two {
+    background: $color-two;
+    color: $color-text_light;
+}
+
+
+
+/*** BASECAMP ***/
+body {
+    background-color: #E5E5E5;
+}
+header, main {
+    background-color: $color-background;
+}
+footer {
+    background: $color-two;
+}
+h5 {
+    color: $color-one;
+}
+h6 {
+    color: $color-text_light;
+}
+a {
+    text-decoration: none;
+    color: $color-text_dark;
+    &:hover {
+        text-decoration: underline;
+        color: $color-one;
+    }
+}
+.button-theme {
+    @extend %evidence-color_one;
+    border: 1px solid $color-one;
+    &:hover {
+        background: #ffffff;
+        color: $color-one;
+    }
+    &:focus {
+        background: #ffffff;
+        color: $color-one;
+    }
+}
+
+
+
+/*** HEADER ***/
+.header-upper {
+    &__gift-card {
+        @include bullet-ico("../img/ico_gift_black.svg");
+        background-size: 18px 18px;
+    }
+    &__loyalty-program {
+        @include bullet-ico("../img/ico_star_black.svg");
+        background-size: 18px 18px;
+    }
+}
+.header-main {
+    background-color: #fff;
+    &__logo {
+        color: $color-text_dark;
+        & span {
+            color: $color-one;
+        }
+    }
+    &__cart {
+        background: url("../img/ico_shopping-cart_black.svg") no-repeat bottom left;
+        &_items {
+            @extend %evidence-color_one;
+            &:hover {
+                color: $color-text_light;
+            }
+        }
+    }
+    &__user a {
+        background: url("../img/ico_chevron-down_black.svg") no-repeat center right;
+    }
+}
+.search-form {
+    & input[type=text] {
+        background-color: $color-background;
+    }
+    & input[type=submit] {
+        background: url("../img/ico_search_white.svg") no-repeat center;
+        background-color: $color-one;
+    }
+}
+.nav-main {
+    background-color: $color-two;
+    &__link {
+        color: $color-text_light;
+        &:hover {
+            color: $color-one;
+        }
+        &_active {
+            color: $color-one;
+        }
+    }
+}
+
+
+
+/*** MAIN CONTENT - MAIN OFFER ***/
+.nav-breadcrump ul li:not(:last-child):after {
+    content: " / ";
+    white-space: pre;
+}
+
+
+/* Blocco contentente nome e voto della soluzione scelta */
+.hotel-selected__hotel-name p {
+    @extend %evidence-color_one;
+}
+.hotel-rating {
+    @extend %evidence-color_one;
+}
+
+
+/* Blocco contenente slider, riassunto e mappa */
+.hotel-photoslider__nav {
+    & .prev-slider {
+        background: url("../img/ico_chevron-left_white.svg") no-repeat center;
+    }
+    & .next-slider {
+        background: url("../img/ico_chevron-right_white.svg") no-repeat center;
+    }
+}
+.offer-selected {
+    @extend %box-color_two;
+    &__resume {
+        & .resume__guest {
+            @include bullet-ico("../img/ico_user_white.svg");
+        }
+        & .resume__room {
+            @include bullet-ico("../img/ico_home_white.svg");
+        }
+        &__resume2 .resume__booking {
+            @include bullet-ico("../img/ico_phone-call_white.svg");
+        }
+    }
+}
+
+
+/* Navigazione secondaria interna all'offerta */
+.cards-menu__link_active {
+    color: $color-one;
+    border-bottom-color: $color-one;
+}
+
+
+/* Blocco contenente i tre riquadri con i dettagli dell'offerta selezionata */
+.package {
+    & h4 {
+        @extend %box-color_two;
+    }
+    &__style {
+        &-half {
+            background: #ffffff;
+        }
+        &-full {
+            background: #ffffff;
+        }
+    }
+    &__list li {
+        @include bullet-ico("../img/ico_check-circle_full.svg"); /* Perchè con list-style-image non c'è allineamento verticale col testo */
+        line-height: 18px;
+    }
+    &__list_multiline li {
+        background: url("../img/ico_check-circle_full.svg") no-repeat left top;
+    }
+    &__date {
+        @include bullet-ico("../img/ico_calendar_black.svg");
+    }
+    &__line {
+    border: 1px dashed #e0e0e0;
+    }
+}
+
+
+
+/*** MAIN CONTENT - OTHER PACKAGES ***/
+
+/* Card hotel a due colonne */
+.hotelcard-double {
+    &__photo p {
+        @extend %evidence-color_one;
+    }
+    &__info {
+        @extend %box-color_two;
+    }
+    &__place {
+        @include bullet-ico("../img/ico_map-pin_white.svg");
+    }
+    &__guest {
+        @include bullet-ico("../img/ico_user_white.svg");
+    }
+    &__room {
+        @include bullet-ico("../img/ico_home_white.svg");
+    }
+}
+
+/* Card hotel a colonna singola */
+.hotelcard-single {
+    &__photo p {
+        @extend %evidence-color_one;
+    }
+    &__info {
+        @extend %box-color_two;
+    }
+    &__place {
+        @include bullet-ico("../img/ico_map-pin_white.svg");
+    }
+    &__guest {
+        @include bullet-ico("../img/ico_user_white.svg");
+    }
+    &__room {
+        @include bullet-ico("../img/ico_home_white.svg");
+    }
+}
+
+
+
+/*** MAIN CONTENT - TESTIMONIALS ***/
+.testimonials-slider {
+    background: url("../img/vector-down.svg") no-repeat 64px 13px, url("../img/vector-up.svg") no-repeat 601px 119px #ffffff;
+    &__name {
+        color: $color-one;
+    }
+    &__nav {
+        & .prev-testimonials {
+            background: url("../img/ico_chevron-left_black.svg") no-repeat center;
+        }
+        & .next-testimonials {
+            background: url("../img/ico_chevron-right_black.svg") no-repeat center;
+        }
+    }
+}
+
+
+
+/*** MAIN CONTENT - NEWSLETTER ***/
+.newsletter {
+    background: linear-gradient(rgba(10, 34, 61, 0.9), rgba(10, 34, 61, 0.7)), url(../img/background-newsletter.jpg);
+    &__title {
+        color: $color-text_light;
+    }
+    &__form {
+        & input[type=mail] {
+            background-color: $color-background;
+        }
+        & input[type=mail]::placeholder {
+            color: #bdbdbd;
+        }
+    }
+}
+
+
+
+/*** MAIN CONTENT - OTHER ACTIVITIES ***/
+.other-activities__card {
+    & p {
+        color: $color-text_light;
+    }
+    &_1 {
+        background: linear-gradient(0deg, rgba(10, 34, 61, 1), rgba(196, 196, 196, 0) 65%), url(../img/activity_01.jpg);
+    }
+    &_2 {
+        background: linear-gradient(0deg, rgba(10, 34, 61, 1), rgba(196, 196, 196, 0) 65%), url(../img/activity_02.jpg);
+    }
+    &_3 {
+        background: linear-gradient(0deg, rgba(10, 34, 61, 1), rgba(196, 196, 196, 0) 65%), url(../img/activity_03.jpg);
+    }
+    &_4 {
+        background: linear-gradient(0deg, rgba(10, 34, 61, 1), rgba(196, 196, 196, 0) 65%), url(../img/activity_04.jpg);
+    }
+}
+
+
+
+/*** FOOTER ***/
+.footer__widget {
+    color: #bdbdbd;
+    & a {
+        color: #bdbdbd;
+        &:hover {
+            color: #bdbdbd;
+        }
+    }
+}
+
+/* Prima riga del footer */
+.footer__logo {
+    color: $color-text_light;
+    & span {
+        color: $color-one;
+    }
+}
+
+/* Seconda riga del footer */
+.footer__contact {
+    &_address {
+        @include bullet-ico("../img/ico_map-pin_full.svg");
+    }
+    &_phone {
+        @include bullet-ico("../img/ico_phone-call_full.svg");
+    }
+    &_mail {
+        @include bullet-ico("../img/ico_mail_full.svg");
+    }
+}
+.contact-form {
+    &__input::placeholder {
+        color: #bdbdbd;
+    }
+    & textarea::placeholder {
+        color: #bdbdbd;
+    }
+    &__required {
+    color: #e0e0e0;
+    }
+}
+
+/* Riga di servizio */
+.footer__bottom {
+    background: url("../img/pay-logo.jpg") no-repeat right top;
+    color: $color-text_light;
+    & a {
+        color: $color-text_light;
+        &:hover {
+            color: $color-text_light;
+        }
+    }
+}

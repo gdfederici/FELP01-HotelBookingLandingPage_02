@@ -1,0 +1,875 @@
+/*** VARIABLES ***/
+$box: 1440px;
+$font-one: 'Mulish', Arial, Helvetica, sans-serif;
+$font-two: 'Nunito', Arial, Helvetica, sans-serif;
+$font-logo: 'Luckiest Guy', cursive;
+$font-normal: 400;
+$font-semibold: 600;
+$font-bold: 700;
+$font-ultrabold: 800; 
+
+/*** EXTEND PLACEHOLDER ***/
+%header-maior {
+    font: {
+        family: $font-one;
+        weight: $font-bold;
+    }
+    text-transform: uppercase;
+}
+%header-minor {
+    font: {
+        family: $font-one;
+        weight: $font-semibold;
+    }
+    text-transform: capitalize;
+}
+
+
+
+/*** BASECAMP ***/
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    line-height: 16px;
+    font: {
+        family: $font-one;
+        weight: $font-normal;
+        size: 12px;
+    }
+}
+h1{
+    font: {
+        family: $font-logo;
+        weight: $font-normal;
+    }
+}
+h2 {
+    @extend %header-maior;
+    font-size: 24px;
+    line-height: 30px;
+}
+h3 {
+    @extend %header-maior;
+    font-size: 36px;
+}
+h4 {
+    @extend %header-maior;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+h5 {
+    @extend %header-minor;
+    font-size: 13px;
+}
+h6 { /* Footer Title*/
+    @extend %header-maior;
+    font-size: 18px;
+}
+strong {
+    font-weight: $font-bold;
+}
+.button-theme {
+    font-size: 14px;
+    font-weight: $font-semibold;
+    border-radius: 4px;
+}
+
+
+
+/*** SCREEN READER ***/
+.onlyscreenreader {
+    height: 1px;
+    width: 1px;
+    margin: -999px;
+    overflow: hidden;
+    position: absolute;
+}
+
+
+
+/*** BOXED STYLE ***/
+.page-layout {
+    padding-left: $box / 100 * 10.07;
+    padding-right: $box / 100 * 10.07;    
+}
+
+
+
+/*** HEADER ***/
+.header-upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 60px;
+    font-size: 10px;
+    & p:first-child {
+        margin-right: 549px;
+    }
+    &__gift-card {
+        padding-left: 38px;
+        display: block;
+    }
+    &__loyalty-program {
+        padding-left: 38px;
+        margin-left: 98px;
+        display: block;
+    }
+}
+
+
+.header-main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+        font-size: 24px;
+        margin-right: 108px;
+    }
+    &__cart {
+        width: 34px;
+        height: 34px;
+        position: relative;
+        margin-left: 238px;
+        &_items {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 20px; /* Non tornano i conti con le misure del file grafico */
+            max-height: 20px;
+            font-size: 10px;
+            line-height: 12px;
+            font-weight: $font-semibold;
+            border-radius: 100%;
+            padding: 5px 7px;
+        }
+    }
+    &__user {
+        display: flex;
+        justify-items: flex-start;
+        align-items: center;
+        margin-left: 53px;
+        line-height: 0;
+        & picture, & img {
+            border-radius: 50%;
+        }
+        & a {
+            display: block;
+            width: 92px;
+            margin-left: 18px;
+            font-size: 14px;
+            line-height: 40px;
+        }
+    }
+}
+.search-form {
+    width: 350px;
+    display: flex;
+    justify-items: flex-start;
+    align-items: flex-start;
+    & input[type=text] {
+        border-radius: 6px 0 0 6px;
+        border: none;
+        width: 285px;
+        padding: 12px 23px;
+    }
+    & input[type=submit] {
+        border-radius: 0 6px 6px 0;
+        border: none;
+        width: 65px;
+        padding: 12px 23px;
+    }
+}
+
+.nav-main {
+    & ul {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    &__link {
+        font-size: 14px;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        line-height: 75px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+
+/*** MAIN CONTENT - MAIN OFFER ***/
+.nav-breadcrump {
+    & ul {
+        display: flex;
+        justify-content: flex-start;
+        line-height: 50px;
+        font-size: 10px;
+    }
+    & a {
+        text-transform: capitalize;
+    }
+}
+
+/* Blocco contentente nome e voto della soluzione scelta */
+.main-offer__hotel-selected {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    text-transform: capitalize;
+    height: 100px;
+}
+.hotel-selected {
+    &__hotel-title {
+        align-self: center;
+    }
+    &__hotel-name {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        & h2 {
+            margin-right: 14px;
+        }
+        & p {
+            font-weight: $font-semibold;
+            font-size: 10px;
+            line-height: 20px;
+            border-radius: 3px;
+            padding: 0 9px;
+            max-height: 20px;
+            align-self: center;
+        }
+    }
+}
+.hotel-rating { /* Blocco con voto degli utenti */
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: $font-semibold;
+    text-align: center;
+    padding: 0 7px;
+    height: 45px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & p:first-child {
+        font-size: 8px;
+    }
+    &__hotel-vote {
+        font-size: 14px;
+    }
+}
+
+/* Blocco contenente slider, riassunto e mappa */
+.main-offer__offer-highlights {
+    display: flex;
+    justify-content: space-between;
+}
+.hotel-photoslider {
+    position: relative;
+    & picture, & img {
+        border-radius: 8px;
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 213px;
+        left: 17px;
+        width: 694px;
+        z-index: 10;
+        & .prev-slider, & .next-slider {
+            display: block;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+.offer-highlights__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.offer-selected {
+    border-radius: 8px;
+    padding: 29px 29px 26px 26px;
+    font-family: $font-two;
+    font-weight: $font-normal;
+    font-size: 12px;
+    line-height: 1.5rem;
+    &__resume {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 17px;
+        & .resume__mini {
+            font-size: 10px;
+        }
+        & .resume__price {
+            font-size: 24px;
+            font-weight: $font-ultrabold;
+        }
+        & .resume__booking {
+            font-size: 18px;
+            font-weight: $font-semibold;
+            line-height: 2rem;
+        }
+        & .resume__guest {
+            padding-left: 20px;
+            text-align: right;
+        }
+        & .resume__room {
+            padding-left: 20px;
+            text-align: right;
+        }
+    }
+    &__resume2 .resume__booking {
+        padding-left: 20px;
+        margin-top: 1.5rem;
+        text-align: right;
+    }
+    &__button {
+        line-height: 43px;
+        padding: 13px 82px;
+    }
+}
+.offer-map {
+    border-radius: 10px;
+}
+
+
+/* Navigazione secondaria interna all'offerta */
+.main-offer__cards-menu {
+    margin-top: 67px;
+    padding-bottom: 15px;
+}
+.cards-menu {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    &__link {
+        font-size: 14px;
+        font-weight: $font-bold;
+        line-height: 20px;
+        padding-bottom: 15px;
+        &:hover {
+            text-decoration: none;
+        }
+        &_active {
+            border-bottom-width: 4px;
+            border-bottom-style: solid;
+        }
+    }
+}
+
+
+/* Blocco contenente i tre riquadri con i dettagli dell'offerta selezionata */
+.main-offer__package h2 {
+    margin: 40px 0 29px 0;
+}
+.package {
+    padding-bottom: 65px;
+    & h4 {
+        line-height: 50px;
+        padding: 0 24px;
+        border-radius: 4px 4px 0 0;
+        font-size: 14px;
+    }
+    &-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__style {
+        &-half {
+            border-radius: 8px;
+            width: 538px;
+            margin-bottom: 33px;
+        }
+        &-full {
+            border-radius: 4px;
+            width: 1110px;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 11px 24px;
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &__column_2 {
+        width: 230px;
+    }
+    &__column_3 {
+        width: 370px;
+        margin: 32px 0; 
+        & h5 {
+            margin-bottom: 10px;
+        }
+    }
+    &__list {
+        & li {
+            padding:  11px 22px 11px 40px;
+        }
+        &_multiline li {
+            padding-top: 0;
+            margin-top: 11px;
+        }
+    }
+    &__mini {
+        font-size: 10px;
+        padding: 2rem 22px 11px 40px;
+    }
+    &__date {
+        font-size: 14px;
+        text-align: right;
+        height: 18px;
+        padding: 11px 0 11px 40px;
+    }
+    &__line {
+        margin: 0 37px 0 25px;
+    }
+}
+
+
+
+/*** MAIN CONTENT - OTHER PACKAGES ***/
+.other-packages {
+    & h3 {
+        margin: 40px 0 65px 0;
+        text-align: center;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__hotelcard {
+        margin-bottom: 30px;
+        &-last {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+/* Card hotel a due colonne */
+.hotelcard-double {
+    display: flex;
+    justify-content: flex-start;
+    height: 500px;
+    width: 730px;
+    &__photo {
+        position: relative;
+        border-radius: 8px 0 0 8px;
+        & p {
+            position: absolute;
+            left: 0;
+            top: 26px;
+            font-weight: $font-semibold;
+            padding: 8px 12px;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0 8px 8px 0;
+        padding: 46px 21px 30px 44px;
+        & h4 {
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+        &>p {
+            line-height: 24px;
+        }
+    }
+    &__bulletpoint {
+        line-height: 24px;
+        margin: 35px 0;
+        font-size: 12px;
+    }
+    &__place {
+        padding-left: 28px;
+    }
+    &__guest {
+        padding-left: 28px;
+    }
+    &__room {
+        padding-left: 28px;
+    }
+    &__book {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__fullprice {
+        text-decoration: line-through;
+        font-size: 14px;
+        font-weight: $font-normal;
+        line-height: 18px;
+    }
+    &__price {
+        font-size: 24px;
+        font-weight: $font-bold;
+        line-height: 30px;
+        margin: 5px 0 0 0;
+    }
+    &__button {
+        padding: 10px 26px;
+        font-family: $font-two;
+    }
+}
+
+/* Card hotel a colonna singola */
+.hotelcard-single {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 500px;
+    width: 350px;
+    &__photo {
+        position: relative;
+        border-radius: 8px 8px 0 0;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+        & p {
+            position: absolute;
+            left: 0;
+            top: 26px;
+            font-size: 8px;
+            font-weight: $font-semibold;
+            line-height: 10px;
+            padding: 4px 9px;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0 0 8px 8px;
+        padding: 30px 21px 25px 32px;
+        height: 250px;
+        & h4 {
+            line-height: 23px;
+        }
+    }
+    &__bulletpoint {
+        line-height: 24px;
+        margin: 23px 0;
+        font-size: 12px;
+    }
+    &__place {
+        padding-left: 28px;
+    }
+    &__guest {
+        padding-left: 28px;
+    }
+    &__room {
+        padding-left: 28px;
+    }
+    &__book {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__fullprice {
+        text-decoration: line-through;
+        font-size: 14px;
+        font-weight: $font-normal;
+        line-height: 18px;
+    }
+    &__price {
+        font-size: 24px;
+        font-weight: $font-bold;
+        line-height: 30px;
+        margin: 5px 0 0 0;
+}
+    &__button {
+        padding: 10px 26px;
+        font-family: $font-two;
+    }
+}
+
+
+
+/*** MAIN CONTENT - TESTIMONIALS ***/
+.page-layout__testimonials {
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+.testimonials {
+    & h3 {
+        margin: 0px 0 115px 0;
+        text-align: center;
+    }
+    &-slider {
+        max-width: 731px;
+        height: 280px;
+        border-radius: 8px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        &__single {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 607px;
+            position: absolute;
+            top: -45px;
+        }
+        &__user {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & picture, & img {
+                border-radius: 50%;
+            }
+        }
+        &__name {
+            font-weight: $font-bold;
+            line-height: 15px;
+            margin: 9px 0 10px 0;
+        }
+        &__date {
+            font-size: 10px;
+        }
+        &_review {
+            line-height: 19px;
+            width: 537px;
+            text-align: justify;
+            margin-top: 32px;
+        }
+        &__nav {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 96px;
+            width: 1074px;
+            z-index: 10;
+            & .prev-testimonials {
+                display: block;
+                width: 30px;
+                height: 30px;
+            }
+            & .next-testimonials {
+                display: block;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+
+
+/*** MAIN CONTENT - NEWSLETTER ***/
+.newsletter {
+    height: 260px;
+    &__layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 731px;
+        margin: 0 auto;
+        padding: 98px 0 87px 0;
+    }
+    &__title {
+        & p {
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 30px;
+        }
+        & h3 {
+            font-weight: $font-semibold;
+            line-height: 45px;
+        }
+    }
+    &__form {
+        width: 350px;
+        display: flex;
+        justify-items: flex-start;
+        align-items: flex-start;
+        & input[type=mail] {
+            border-radius: 4px 0 0 4px;
+            border: none;
+            width: 285px;
+            padding: 19px 18px 18px 33px;
+            line-height: 18px;
+        }
+        & input[type=submit] {
+            border-radius: 0 4px 4px 0;
+            border: none;
+            width: 65px;
+            padding: 20px 18px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+}
+
+
+
+/*** MAIN CONTENT - OTHER ACTIVITIES ***/
+.page-layout__other-activities {
+    padding-top: 60px;
+    padding-bottom: 98px;
+}
+.other-activities {
+    & h3 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 57px;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        position: relative;
+        width: 255px;
+        height: 255px;
+        border-radius: 6px;
+        & div {
+            position: absolute;
+            top: 143px;
+            max-width: 255px;
+            padding: 0 27px;
+        }
+        & p {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: $font-bold;
+        }
+    }
+    &__button {
+        display: inline-block;
+        font-family: $font-two;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 6px 21px;
+        margin-top: 18px;
+    }
+}
+
+
+
+/*** FOOTER ***/
+.page-layout__footer {
+    padding-top: 108px;
+}
+.footer__widget {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+    font-size: 14px;
+    &_single {
+        width: 300px;
+        &>h6 {
+            margin-bottom: 23px;
+        }
+        & ul {
+            line-height: 22px;
+        }
+    }
+    &_last {
+        width: 200px;
+        margin-left: 54px;
+        position: relative;
+    }
+    &_double {
+        width: 550px;
+        &>h6 {
+            margin-bottom: 34px;
+        }
+        & p {
+            line-height: 24px;
+        }
+    }
+}
+.footer__logo {
+    font-family: $font-logo;
+    font-size: 64px;
+    font-weight: $font-normal;
+    line-height: 64px;
+    margin-top: 10px;
+}
+.footer__social {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 293px;
+    & ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        line-height: 0; /* Eliminare spazio vuoto extra */ 
+    }
+    & li {
+        margin-left: 10px;
+    }
+}
+.footer__contact {
+    padding-left: 40px;
+    margin: 22px 0;
+}
+.contact-form {
+    &__input {
+        width: 201px; /* Non tornano i conti con le misure del file grafico */
+        padding: 18px 23px 17px 23px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+    & input[type=text] {
+        margin-right: 30px;
+    }
+    & textarea {
+        padding: 18px 23px 17px 23px;
+        border-radius: 4px;
+        width: 481px;
+        height: 88px;
+        margin-bottom: 25px;
+        &::placeholder {
+            font-family: $font-one;
+        }
+    }
+    & input[type=submit] {
+        font-size: 12px;
+        padding: 17px 64px 16px 65px;
+    }
+    &__required {
+        font-size: 12px;
+        font-weight: $font-bold;
+        position: absolute;
+        right: 0;
+        bottom: 17px;
+        z-index: 10;
+    }
+}
+
+/* Riga di servizio */
+.footer__bottom {
+    padding-bottom: 46px;
+    & ul {
+        display: flex;
+        justify-content: center;
+    }
+    & li {
+        padding-left: 20px;
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+} 
