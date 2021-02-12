@@ -11,7 +11,7 @@ IT_ HTML, CSS+SCSS (flexbox e metogologia BEM), Figma, Trello, GitHub.<br/>
 EN_ HTML, CSS+SCSS (flexbox and BEM methodology), Figma, Trello, GitHub.<br/>
 
 ## Link:
-https://lp01-hotelbookinglandingpage02.netlify.app/<br/> 
+https://wfelp01-hotelbookinglandingpage02.netlify.app/<br/> 
 
 ### Progetto precedente:
 https://github.com/gdfederici/WFE_LP01-HotelBookingLandingPage_01<br/>
